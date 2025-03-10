@@ -1,5 +1,23 @@
 # Getting Started with the BridgeFund Assignment
 
+### Optional (Run with docker)
+
+> Due to timeboxing the assignment I did not had the time to fully test the docker setup. Be sure to have docker installed before trying this.
+
+We can easily run the whole compose with only a single command:
+
+```bash
+docker compose -f docker.compose.yml up
+```
+
+If you need to stop and remove all containers, networks, and all images used by any service in docker-compose.yml file, use the command:
+
+```bash
+docker compose -f docker.compose.yml down --rmi all
+```
+
+Proceed to the API Examples step
+
 ## Pre reqs
 
 [Node v22.13.0](https://nodejs.org/en/download)\
@@ -12,8 +30,6 @@ npm install -g yarn
 
 ### Database Mysql Preparation
 
-> Due to timeboxing the assignment I did not had the time to setup an automatic docker compose
-
 Create a database, you will need the information to fill the .env
 
 on the /sql folder you will find two files, migration.sql & bootstrap.data.sql
@@ -21,6 +37,8 @@ on the /sql folder you will find two files, migration.sql & bootstrap.data.sql
 You will need to run the migration.sql file inside your database, following that, you must run the bootstrap.data.sql
 
 Inside the /be folder you need to create your .env file and update the values with the ones of your database
+
+> Due to the docker compose implementation, i have decided to keep the .env files
 
 ```bash
 # Database configuration

@@ -47,4 +47,19 @@ CREATE TABLE `building_spaces`
     `ended_at` datetime DEFAULT NULL
 );
 
+-- CREATE TABLE `building_spaces`
+-- (
+--   	`id` INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+--     `building_id` INT(11) NOT NULL,
+--     `session` VARCHAR(36),
+--     `parking_type` ENUM ('RESIDENT', 'CARS', 'MOTORCYCLE') NOT NULL,
+--     `started_at` datetime NOT NULL DEFAULT current_timestamp,
+--     `ended_at` datetime DEFAULT NULL
+-- );
+
+-- CREATE TRIGGER before_insert_building_spaces
+--   BEFORE INSERT ON building_spaces
+--   FOR EACH ROW
+--   SET new.session = UUID();
+
 ALTER TABLE `building_spaces` ADD FOREIGN KEY (`building_id`) REFERENCES `building` (`id`);
