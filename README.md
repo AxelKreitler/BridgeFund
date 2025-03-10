@@ -10,9 +10,17 @@
 npm install -g yarn
 ```
 
-### Database Mysql Preparation
+### Run via docker
 
-> Due to timeboxing the assignment I did not had the time to setup an automatic docker compose
+Due to timeboxing the assignment I did not had the time to fully test my docker compose on different OS.
+
+Obviously docker is required to try this.
+
+It should still work. Fell free to try it on the branch "docker" (Readme is updated there as well)
+
+Otherwise please check the following steps
+
+### Database Mysql Preparation
 
 Create a database, you will need the information to fill the .env
 
